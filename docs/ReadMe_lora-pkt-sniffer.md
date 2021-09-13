@@ -42,7 +42,7 @@ lora-pkt-sniffer软件包当前主要支持以下功能：
 <a name="pp8Lu"></a>
 ## 2.1 lora-pkt-sniffer软件包功能框图
 lora-pkt-sniffer软件包功能框图如下所示
-![lora-gw-driver功能框图](images\lps-function-block.png)
+![lora-gw-driver功能框图](images/lps-function-block.png)
 
 ## 2.2 lora-pkt-sniffer软件包组织结构
 ```c
