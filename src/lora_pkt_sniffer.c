@@ -12,13 +12,6 @@ Maintainer: forest-rain
 #include <stdbool.h>       /* bool type */
 #include <stdio.h>         /* rt_kprintf */
 #include <string.h>        /* memset */
-#ifdef BSP_USING_LGW_FWD
-    #include "libc\libc_signal.h"        /* sigaction */
-    #include <unistd.h>        /* getopt access */
-#else
-    //#include <signal.h>        /* sigaction */
-    //#include <unistd.h>        /* getopt access */
-#endif
 
 #include <rthw.h>
 #include <rtdevice.h>
@@ -433,13 +426,6 @@ static void lps_rx_thread_entry(void* parameter)
                                 LPS_DEBUG_LOG(LPS_DBG_SNF, DBG_LVL, " size:%3u\n", rx_pkt_ptr->size);
                                 LPS_DEBUG_LOG(LPS_DBG_SNF, DBG_LVL, " CRC error, damaged packet,crc_bad_counter = %d\n\n", crc_bad_counter);
                             }
-        ////                    else if (rx_pkt_ptr->status == STAT_NO_CRC)
-        ////                    {
-        ////                        LPS_DEBUG_LOG(LPS_DBG_SNF, DBG_LVL, " if_chain:%2d", rx_pkt_ptr->if_chain);
-        ////                        LPS_DEBUG_LOG(LPS_DBG_SNF, DBG_LVL, " tstamp:%010u", rx_pkt_ptr->count_us);
-        ////                        LPS_DEBUG_LOG(LPS_DBG_SNF, DBG_LVL, " size:%3u\n", rx_pkt_ptr->size);
-        ////                        LPS_DEBUG_LOG(LPS_DBG_SNF, DBG_LVL, " no CRC\n\n");
-        ////                    }
                             else
                             {
                                 LPS_DEBUG_LOG(LPS_DBG_SNF, DBG_LVL, " if_chain:%2d", rx_pkt_ptr->if_chain);
