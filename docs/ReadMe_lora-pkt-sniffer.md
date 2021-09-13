@@ -42,7 +42,7 @@ lora-pkt-sniffer软件包当前主要支持以下功能：
 <a name="pp8Lu"></a>
 ## 2.1 lora-pkt-sniffer软件包功能框图
 lora-pkt-sniffer软件包功能框图如下所示
-![lora-gw-driver功能框图](images/lps-function-block.png)
+![lora-pkt-sniffer功能框图](images/lps-function-block.png)
 
 ## 2.2 lora-pkt-sniffer软件包组织结构
 ```c
@@ -171,7 +171,7 @@ RT-Thread online packages  --->
 - lps resume 恢复lps rx线程,重新开始接收空口数据包
 - ...
 ## 4.3 本地直显模式示例
-![lgd-shell-cmds](images/lps-shell-lorawan-frame-decrypt-local-disp.gif)
+![lps-shell-lorawan-local](images/lps-shell-lorawan-frame-decrypt-local-disp.gif)
 本地串口直显模式
 
 - lps捕获空口lora数据，北向通过uart连接到PC串口调试助手(MabaXterm)
@@ -186,7 +186,7 @@ RT-Thread online packages  --->
    - 服务器应答 data unconfirm down
 
 ## 4.4 wireshark显示模式
-![lgd-shell-cmds](images/lps-shell-wireshark-disp.gif)
+![lgs-shell-wireshark](images/lps-shell-wireshark-disp.gif)
 Wireshark显示模式
 
 - lps捕获空口lora数据，北向通过wifi连接到PC ，同时通过串口与Wireshark解析与显示
